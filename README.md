@@ -1,2 +1,2 @@
-# louisbrennan01.github.io
+# louisbrennan.github.io
 Personal website
