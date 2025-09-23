@@ -62,6 +62,27 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 });
 
 
+// Contact Form Handling
+const contactForm = document.querySelector('.contact-form');
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Simple validation
+    if (name && email && message) {
+        alert('Thank you for your message! I\'ll get back to you soon.');
+        contactForm.reset();
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+
 // Smooth scrolling for navigation links (fallback for older browsers)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
