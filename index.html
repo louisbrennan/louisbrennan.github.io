@@ -1,268 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Brennan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Louis Brennan is a software engineer and computer science student at University College Dublin, working across application software and embedded systems.">
+  <meta name="theme-color" content="#f6f7f5">
+  <title>Louis Brennan - Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Louis Brennan</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#formula-student">Formula Student</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="wordmark" href="#home">Louis Brennan<span aria-hidden="true">.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="primary-menu">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home/Intro Section -->
-        <section id="home" class="home">
-            <div class="home-content">
-                <h1>Louis Brennan</h1>
-                <div class="tagline">
-                    <span class="typing-text" id="typing-text"></span>
-                </div>
-                <div class="social-buttons">
-                    <a href="https://github.com/louisbrennan" class="btn" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/louis-brennan" class="btn" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="cv.pdf" class="btn" download>
-                        <i class="fas fa-file"></i> Download CV
-                    </a>
+  <main id="main">
+    <section class="hero section container" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Software engineering · Dublin, Ireland</p>
+        <h1 id="hero-title">Louis Brennan</h1>
+        <p class="hero-role">Software Engineer</p>
+        <p class="hero-intro">Computer Science student at University College Dublin, building software across application infrastructure and embedded systems.</p>
+        <div class="hero-links">
+          <a class="button button-primary" href="cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/louisbrennan" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://linkedin.com/in/louis-brennan" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-portrait">
+        <img src="images/me.png" alt="Louis Brennan">
+      </figure>
+    </section>
 
-                </div>
+    <section class="section container" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="eyebrow">Where I’ve worked</p>
+        <h2 id="experience-title">Experience</h2>
+      </div>
+      <article class="experience-entry">
+        <div class="entry-meta">
+          <h3>Lead Software Engineer</h3>
+          <p>UCD Formula Student</p>
+          <time datetime="2026-02">February 2026</time> – Present
+        </div>
+        <div class="entry-detail">
+          <p>Lead a software engineering team developing embedded software and communications systems for a Formula Student racecar.</p>
+          <ul>
+            <li>Designed and built a communications network architecture using multiple modular microcontrollers.</li>
+            <li>Implemented vehicle firmware and telemetry logging software using C++.</li>
+          </ul>
+          <img class="experience-image" src="images/fs_car.png" alt="Formula Student racecar developed by the UCD team" loading="lazy">
+        </div>
+      </article>
+      <article class="experience-entry">
+        <div class="entry-meta">
+          <h3>Software Engineer Intern</h3>
+          <p>IBM Turbonomic</p>
+          <time datetime="2026-03">March 2026</time> – <time datetime="2026-09">September 2026</time>
+        </div>
+        <div class="entry-detail">
+          <p>Developed production software for the application infrastructure team of IBM Turbonomic, an application resource management platform.</p>
+          <ul>
+            <li>Designed and implemented GPU usage monitoring functionality to support automated resource scaling on monitored GPU environments.</li>
+            <li>Built and integrated backend and frontend components using Java, Python, TypeScript, React, and Kubernetes.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section section-muted" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project">
+            <img src="images/hexoust.png" alt="HexOust board game interface" loading="lazy">
+            <div class="project-body">
+              <p class="project-tech">Java · JavaFX</p>
+              <h3>HexOust Board Game</h3>
+              <p>A strategic, turn-based board game built with JavaFX GUI tools and event-driven programming.</p>
+              <a class="text-link" href="https://github.com/louisbrennan/HexOust" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about">
-            <div class="container">
-                <div class="content-section">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="about-content">
-                        <div class="about-image">
-                            <img src="images/me.jpeg" height="400">
-                        </div>
-                        <div class="about-text">
-                            <p>
-                                I'm a passionate software engineer with a strong background in computer science and a love for solving complex problems through technology.
-                            </p>
-                            <p>
-                                I am currently pursuing a BSc in Computer Science at UCD. I have a solid foundation in algorithms, data structures, and software development principles. My journey in tech has been driven by curiosity and a desire to create innovative solutions.
-                            </p>
-                            <p>
-                                When I'm not coding, you can find me training martial arts, playing and producing music, or playing golf.
-                            </p>
-                            <p>
-                                <strong>Education:</strong> Bachelor's in Computer Science - UCD 2023 - present<br>
-                                <strong>Interests:</strong> Programming, Music, MMA, Golf, Rugby
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          </article>
+          <article class="project">
+            <img src="images/gantt.png" alt="Gantt chart generated by the project management software" loading="lazy">
+            <div class="project-body">
+              <p class="project-tech">C</p>
+              <h3>Project Management Software</h3>
+              <p>A text-based project management tool with a Gantt chart generator, built using C.</p>
+              <a class="text-link" href="https://github.com/louisbrennan/GanttMaker" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
-
-        <!-- Formula Student Section -->
-        <section id="formula-student">
-            <div class="container">
-                <div class="content-section">
-                    <h2 class="section-title">Formula Student</h2>
-                    <div class="fs-header">
-                      <div class="fs-header-text">
-                        <div class="fs-role">
-                            <h3>Lead Software Engineer</h3>
-                        </div>
-                        <p class="fs-intro">
-                            I lead the software engineering team building the embedded software and
-                            communications systems for our Formula Student racecar.
-                        </p>
-                      </div>
-                        <img src="images/fs_car.png" alt="Formula Student Racecar" class="fs-image">
-                    </div>
-
-                    <div class="fs-grid">
-                        <div class="fs-card">
-                            <div class="fs-icon"><i class="fas fa-users"></i></div>
-                            <h4>Team Leadership</h4>
-                            <p>Lead a software engineering team developing embedded software and communications systems for the racecar.</p>
-                        </div>
-
-                        <div class="fs-card">
-                            <div class="fs-icon"><i class="fas fa-network-wired"></i></div>
-                            <h4>Network Architecture</h4>
-                            <p>Designed and built a communications network architecture using multiple modular microcontrollers.</p>
-                        </div>
-
-                        <div class="fs-card">
-                            <div class="fs-icon"><i class="fas fa-microchip"></i></div>
-                            <h4>Firmware &amp; Telemetry</h4>
-                            <p>Implemented vehicle firmware and telemetry logging software in C++.</p>
-                        </div>
-                    </div>
-                </div>
-
+          </article>
+          <article class="project">
+            <img src="images/benchmark.png" alt="Benchmark results comparing sorting algorithm energy consumption" loading="lazy">
+            <div class="project-body">
+              <p class="project-tech">Java · Research experiment</p>
+              <h3>Algorithm Energy Consumption Analysis</h3>
+              <p>Analyzed how the energy consumption of different sorting algorithms scales with larger datasets.</p>
+              <a class="text-link" href="https://github.com/louisbrennan/AlgorithmAnalysis" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <div class="container">
-                <div class="content-section">
-                    <h2 class="section-title">Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Programming Languages</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">C</span>
-                                <span class="skill-tag">SQL</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Computer Science Topics</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Algorithms</span>
-                                <span class="skill-tag">Data Structures</span>
-                                <span class="skill-tag">Agile Development</span>
-                                <span class="skill-tag">Computer Networking</span>
-                                <span class="skill-tag">Cybersecurity</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Tools and Libraries</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Django</span>
-                                <span class="skill-tag">JavaFX</span>
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">Docker</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </article>
+          <article class="project">
+            <img src="images/bigdata_graph.png" alt="Graph of S&amp;P 500 big data analysis results" loading="lazy">
+            <div class="project-body">
+              <p class="project-tech">MapReduce · SQL</p>
+              <h3>S&amp;P 500 Big Data Analysis</h3>
+              <p>Benchmarked parallelized MapReduce against traditional SQL for big data calculations across 2,000 CSV files of stock market data.</p>
             </div>
-        </section>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <div class="content-section">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-image">
-                              <img src="images/hexoust.png" height="200">
-                            </div>
-                            <div class="project-content">
-                              <h3>HexOust Board Game</h3>
-                              <p>A strategic turn based board game made with JavaFX GUI tools and event-driven programming. </p>
-                              <div class="project-links">
-                                  <a href="https://github.com/louisbrennan/HexOust" target="_blank"><i class="fab fa-github"></i></a>
-                              </div>
-                          </div>
-                      </div>
-                      
-                      <div class="project-card">
-                          <div class="project-image">
-                              <img src="images/gantt.png" height="200">
-                          </div>
-                          <div class="project-content">
-                              <h3>Project Management Software</h3>
-                              <p>Text-based project management software with a Gantt chart generator built with bare-metal C</p>
-                              <div class="project-links">
-                                <a href="https://github.com/louisbrennan/GanttMaker" target="_blank"><i class="fab fa-github"></i></a>
-                              </div>
-                          </div>
-                      </div>
-                      
-                      <div class="project-card">
-                          <div class="project-image">
-                              <img src="images/benchmark.png" height="200">
-                          </div>
-                          <div class="project-content">
-                              <h3>Algorithm Energy Consumption Analysis</h3>
-                              <p>Conducted a research experiment on how the energy consumption of different sorting algorithms in Java scale with larger datasets.</p>
-                              <div class="project-links">
-                                <a href="https://github.com/louisbrennan/AlgorithmAnalysis" target="_blank"><i class="fab fa-github"></i></a>
-                              </div>
-                          </div>
-                      </div>
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <p class="eyebrow">Tools and foundations</p>
+        <h2 id="skills-title">Skills</h2>
+      </div>
+      <div class="skills-list">
+        <div class="skill-row">
+          <h3>Languages</h3>
+          <p>C, C++, Python, Java, TypeScript, SQL</p>
+        </div>
+        <div class="skill-row">
+          <h3>Technologies</h3>
+          <p>Kubernetes, Docker, React, Git</p>
+        </div>
+        <div class="skill-row">
+          <h3>Concepts</h3>
+          <p>Object-Oriented Programming, Databases, Data Structures &amp; Algorithms, Computer Networking, Cybersecurity, Digital Systems</p>
+        </div>
+      </div>
+    </section>
 
-                      <div class="project-card">
-                          <div class="project-image">
-                              <img src="images/bigdata_graph.png" height="200" alt="S&P 500 Big Data Analysis graph">
-                          </div>
-                          <div class="project-content">
-                              <h3>S&amp;P 500 Big Data Analysis</h3>
-                              <p>Benchmarked and compared parallelised MapReduce against traditional SQL for big data calculations across 2,000 CSV files of stock market data.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    <section class="section section-muted" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Academic background</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <article class="education-primary">
+          <div>
+            <h3>BSc Computer Science</h3>
+            <p>University College Dublin</p>
           </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-          <div class="container">
-              <div class="content-section">
-                  <h2 class="section-title">Contact Me</h2>
-                  <div class="contact-content">
-                      <div class="contact-info">
-                          <h3>Get In Touch</h3>
-                          <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-                          <p><strong>Email:</strong> <a href="mailto:louisbrennan01@gmail.com">louisbrennan01@gmail.com</a></p>
-                          <p><strong>GitHub:</strong> <a href="https://github.com/louisbrennan" target="_blank">github.com/louisbrennan01</a></p>
-                          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/louis-brennan" target="_blank">linkedin.com/in/louis-brennan</a></p>
-                      </div>
-                      
-                      <form action="https://formspree.io/f/xgvnezwn" method="POST" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form>
-                  </div>
-              </div>
+          <div class="education-result">
+            <p>Current GPA <strong>4.12 / 4.2</strong></p>
+            <p><time datetime="2023-09">September 2023</time> – <time datetime="2027-05">May 2027</time> (expected)</p>
           </div>
-      </section>
+        </article>
+        <article class="education-secondary">
+          <h3>Leaving Certificate <span>- CBC Monkstown</span></h3>
+          <p><time datetime="2020-09">September 2020</time> – <time datetime="2023-07">July 2023</time> <span class="separator">·</span> 625 points</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="additional" aria-labelledby="additional-title">
+      <div class="section-heading">
+        <p class="eyebrow">Beyond software</p>
+        <h2 id="additional-title">Additional experience</h2>
+      </div>
+      <div class="additional-list">
+        <article>
+          <div>
+            <h3>Sales Assistant</h3>
+            <p>Dunnes Stores</p>
+          </div>
+          <p>September 2023 – June 2025</p>
+          <p>Worked as part of a large team of 100+ staff in a fast-paced environment.</p>
+        </article>
+        <article>
+          <div>
+            <h3>Sales Assistant</h3>
+            <p>Sports Direct</p>
+          </div>
+          <p>August 2022 – May 2023</p>
+          <p>Developed interpersonal and teamwork skills while assisting 50+ customers daily.</p>
+        </article>
+      </div>
+      <p class="interests"><strong>Interests</strong> Coding, Poker, Music Production, Rugby, Martial Arts, Chess</p>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Contact</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-details">
+            <p>For opportunities or a conversation about my work, reach me by email, phone, or professional network.</p>
+            <p><a href="mailto:louisbrennan01@gmail.com">louisbrennan01@gmail.com</a></p>
+            <p><a href="tel:+353851040191">+353 85 104 0191</a></p>
+            <p><a href="https://github.com/louisbrennan" target="_blank" rel="noopener noreferrer">github.com/louisbrennan <span aria-hidden="true">↗</span></a></p>
+            <p><a href="https://linkedin.com/in/louis-brennan" target="_blank" rel="noopener noreferrer">linkedin.com/in/louis-brennan <span aria-hidden="true">↗</span></a></p>
+          </div>
+          <form action="https://formspree.io/f/xgvnezwn" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="button button-primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-      <div class="container">
-          <p>&copy; 2025 Louis Brennan. All rights reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="wordmark" href="#home">Louis Brennan<span aria-hidden="true">.</span></a>
+      <p>© <span id="current-year">2026</span> Louis Brennan</p>
+    </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
